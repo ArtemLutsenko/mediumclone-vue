@@ -3,6 +3,8 @@
 </template>
 
 <script>
+import {actionTypes} from "@/store/modules/feed";
+
 export default {
   name: "McvFeed",
   props:{
@@ -10,6 +12,9 @@ export default {
       required: true,
       type: String
     }
+  },
+  mounted() {
+    this.$store.dispatch(actionTypes.getFeed, {apiUrl: this.apiUrl})
   }
 }
 </script>
