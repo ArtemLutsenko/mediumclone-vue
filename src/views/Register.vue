@@ -56,8 +56,7 @@ export default {
         username: this.username,
         password: this.password,
       })
-          .then(user => {
-            console.log(user)
+          .then(() => {
             this.$router.push({name: "globalFeed"})
           })
     }

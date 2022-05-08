@@ -5,7 +5,14 @@
     <div class="sidebar" v-if="popularTags">
       <p>Popular Tags</p>
       <div class="tag-list">
-        <router-link class="tag-default tag-pill" v-for="popularTag in popularTags" :key="popularTag" :to="{name: 'tag', params: {slug:popularTag}}">{{popularTag}}</router-link>
+        <router-link
+            v-for="popularTag in popularTags"
+            :key="popularTag"
+            :to="{name: 'tag', params: {slug: popularTag}}"
+            class="tag-default tag-pill"
+        >
+          {{ popularTag }}
+        </router-link>
       </div>
     </div>
   </div>
